@@ -1,3 +1,4 @@
+// webpack基本配置文件
 // 使用严格模式，更多严格模式可以查看
 // [阮一峰老师的es标准入门](http://es6.ruanyifeng.com/?search=%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F&x=0&y=0#docs/function#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F)
 'use strict'

@@ -1,3 +1,4 @@
+// babel相关配置
 {
   // presets指明转码的规则
   "presets": [

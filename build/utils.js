@@ -1,3 +1,4 @@
+// 工具函数
 'use strict'
 //引入node的path模块
 const path = require('path')

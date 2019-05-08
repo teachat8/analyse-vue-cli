@@ -1,3 +1,4 @@
+// vue-loader配置文件
 'use strict'
 // 引入工具函数
 const utils = require('./utils')
