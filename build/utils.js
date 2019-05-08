@@ -1,4 +1,5 @@
 'use strict'
+//引入node的path模块
 const path = require('path')
 
 // 引入配置文件config/index.js

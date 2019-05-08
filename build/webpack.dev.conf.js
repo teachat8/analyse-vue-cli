@@ -7,6 +7,7 @@ const webpack = require('webpack')
 const config = require('../config')
 // 合并webpack配置
 const merge = require('webpack-merge')
+//引入node的path模块
 const path = require('path')
 // 基本配置
 const baseWebpackConfig = require('./webpack.base.conf')

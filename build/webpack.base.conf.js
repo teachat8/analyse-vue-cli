@@ -1,6 +1,7 @@
 // 使用严格模式，更多严格模式可以查看
 // [阮一峰老师的es标准入门](http://es6.ruanyifeng.com/?search=%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F&x=0&y=0#docs/function#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F)
 'use strict'
+//引入node的path模块
 const path = require('path')
 
 // 引入工具函数
@@ -55,10 +56,10 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   // Webpack 在启动后会从配置的入口模块出发找出所有依赖的模块，Resolve 配置 Webpack 如何寻找模块所对应的文件。
-  resolve: {
+  resolve: {  //解析模块的可选项
     // 配置了这个，对应的扩展名可以省略
     extensions: ['.js', '.vue', '.json'],
-    alias: {
+    alias: {  //模快别名列表
       // 给定对象的键后的末尾添加 $，以表示精准匹配 node_modules/vue/dist/vue.esm.js
       // 引用 import Vue from 'vue'就是引入的这个文件最后export default Vue 导出的Vue;
       // 所以这句可以以任意大写字母命名 比如：import V from 'vue'
@@ -68,8 +69,8 @@ module.exports = {
     }
   },
   // 定义一些文件的转换规则
-  module: {
-    rules: [
+  module: {     //模块的相关配置
+    rules: [    //根据文件的后缀提供一个loader,解析规则
       // 是否使用eslint 这里配置是true
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
@@ -81,7 +82,7 @@ module.exports = {
       {
         // js文件使用babel-loader转换
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'babel-loader',   //es6 => es5
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
